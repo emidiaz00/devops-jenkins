@@ -23,7 +23,7 @@ pipeline {
         stage('Desplegar') {
             steps {
                 // Copia el artefacto compilado a una ubicación de despliegue
-
+                sh 'cp -f target/devops_ci.war /deploy/devops_ci.war'
             }
         }
     }

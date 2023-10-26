@@ -91,7 +91,7 @@ public class BasicApplicationTests {
         Base64.Encoder encoder = Base64.getEncoder();
         String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
         Invoice mockdto = new Invoice();
-        mockdto.setId(1);
+        mockdto.setId(2);
         Mockito.when(ir.findById(mockdto.getId())).thenReturn(Optional.of(mockdto));
         Mockito.when(irm.InvoiceRequestToInvoice(new InvoiceRequest())).thenReturn(mockdto);
         InvoiceResponse invoiceResponse = new InvoiceResponse();
